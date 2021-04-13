@@ -63,7 +63,7 @@ function Example (props: Props) {
                                 type={'text'}
                                 value={props.output}
                                 fullWidth={true}
-                                label="GPT-3 Output"
+                                label="GPT-4 Output"
                                 variant="outlined"
                                 InputLabelProps={{ shrink: props.output !== undefined }}
                                 disabled

@@ -33,8 +33,8 @@ export default function VariationsTab() {
                     <Typography variant="subtitle1">Variations</Typography>
                     <Typography variant="body2">
                         This is a tool to generate multiple completions from the same prompt. Use it to explore the variety
-                        of GPT-3 completions and impact of parameters on them. If you like a completion, add it to the prompt
-                        and GPT-3 will generate more similar completions.
+                        of GPT-4 completions and impact of parameters on them. If you like a completion, add it to the prompt
+                        and GPT-4 will generate more similar completions.
                     </Typography>
                     <Box mt={1}>
                         <Typography id="max-variations-slider" gutterBottom>

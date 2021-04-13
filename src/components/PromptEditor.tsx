@@ -202,7 +202,7 @@ export function PromptEditor() {
                                 max={512}
                             />
 
-                            <Tooltip title="On which symbols GPT-3 should stop generating text. Enter \n for a line break." placement="left">
+                            <Tooltip title="On which symbols GPT-4 should stop generating text. Enter \n for a line break." placement="left">
                                 <Typography gutterBottom>
                                     Stop sequences:
                                 </Typography>

@@ -147,7 +147,7 @@ export default function Conversation(props: Props) {
                                             }));
                                         }}
                                         className={styles.settingField}
-                                        label={'Before GPT-3 Completion'}
+                                        label={'Before GPT-4 Completion'}
                                         variant={'outlined'}
                                     />
                                 </Grid>

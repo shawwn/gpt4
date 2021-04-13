@@ -53,7 +53,7 @@ export default function Header() {
                     <IconButton onClick={handleRedoClick}><RedoIcon/></IconButton>
                 </div>
                 <div className={classes.buttonGroup}>
-                    <IconButton aria-label="GitHib" onClick={() => window.open('https://github.com/sevazhidkov/prompts-ai', '_blank')}>
+                    <IconButton aria-label="GitHib" onClick={() => window.open('https://github.com/shawwn/prompts-ai', '_blank')}>
                         <GitHubIcon fontSize={'small'}/>
                     </IconButton>
                 </div>
