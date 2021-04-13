@@ -775,7 +775,7 @@ const sendMessageInConversationAsync = (conversationId: string): AppThunk => (di
     }
     const completionParams = {apiKey: state.editor.present.apiKey, ...updatedConversation.completionParams!};
     const prompt = updatedConversation.initialPrompt + updatedConversation.parts.map(p => p.text).join('');
-    GptAPI.generateCompletions(prompt, completionParams).then(response => {
+    GptAPI.generateCompletions(prompt, completionParams, 1, false).then(response => {
         console.log(response.data);
         return { ...response.data };
     }).then(response => {
