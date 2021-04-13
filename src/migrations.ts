@@ -133,7 +133,7 @@ export const migrations = {
                     currentWorkspaceId: 'first_workspace',
                     workspaces: [{
                         id: 'first_workspace',
-                        prompt: "Click Explore Templates -> Song Generation for a fun example!",
+                        prompt: "Click Explore Templates -> Song Generation for a fun example! To get longer prompts, clear the \"Stop sequences\" field.",
                         // prompt: "Input: Anna and Mike is going skiing.\n" +
                         //     "Output: Anna and Mike are going skiing.\n" +
                         //     "Input: Anna and Pat are married; he has been together for 20 years.\n" +
@@ -147,8 +147,7 @@ export const migrations = {
                         topP: 1,
                         frequencyPenalty: 0,
                         presencePenalty: 0,
-                        // stopSymbols: ["\\n"],
-                        stopSymbols: [],
+                        stopSymbols: ["\\n"],
                         maxTokens: 80,
                         tabIndex: 0,
 
