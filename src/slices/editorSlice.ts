@@ -142,7 +142,8 @@ const initialState: EditorState = {
         topP: 1,
         frequencyPenalty: 0,
         presencePenalty: 0,
-        stopSymbols: ["\\n"],
+        // stopSymbols: ["\\n"],
+        stopSymbols: [],
         maxTokens: 80,
         tabIndex: 0,
 
