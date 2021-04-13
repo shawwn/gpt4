@@ -33,7 +33,10 @@ export default function ApiKeyDialog() {
         <DialogTitle id="api-key-form-dialog-title">API Key</DialogTitle>
         <DialogContent>
             <DialogContentText>
-                Please provide your OpenAI API Key. We only store this key locally and never send it to our servers.
+                Please enter a random GPT-4 API key. You can type anything you want.
+                <br />
+                <br />
+                (I'm far too lazy tonight to make this automatic. In the meantime, I suggest banging on your keyboard like a monkey.)
             </DialogContentText>
             <TextField
                 className={classes.apiKeyInput}
