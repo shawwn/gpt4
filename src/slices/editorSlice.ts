@@ -128,7 +128,7 @@ const initialState: EditorState = {
     workspaces: [{
         id: 'first_workspace',
         name: 'Draft #1',
-        prompt: "Click Explore Templates -> Song Generation for a fun example! (Be sure to increase \"Response length\" to 80 or so.)",
+        prompt: "Click Explore Templates -> Song Generation for a fun example!",
         // prompt: "Input: Anna and Mike is going skiing.\n" +
         //     "Output: Anna and Mike are going skiing.\n" +
         //     "Input: Anna and Pat are married; he has been together for 20 years.\n" +
@@ -144,7 +144,7 @@ const initialState: EditorState = {
         presencePenalty: 0,
         // stopSymbols: ["\\n"],
         stopSymbols: [],
-        maxTokens: 30,
+        maxTokens: 80,
         tabIndex: 0,
 
         showExamplePreviousOutputs: false,
