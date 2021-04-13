@@ -1,5 +1,9 @@
 import {TabIndex, Example, CompletionParameters} from "../slices/editorSlice";
 
+//const HOST = `https://api.openai.com`;
+//const HOST = `http://localhost:9000`;
+const HOST = `http://api.gpt4.org:9000`;
+
 interface CodeExample {
     id: string;
     name: string;
@@ -53,12 +57,13 @@ function generateNodeJsExample(parameters: CompletionParameters, tabIndex: TabIn
 var example = ${formatJavascriptString(exampleText)};
 var config = {
   method: 'post',
-  url: 'https://api.openai.com/v1/engines/${parameters.engine}/completions',
+  url: '${HOST}/v1/engines/${parameters.engine}/completions',
   headers: { 
     'Content-Type': 'application/json', 
     'Authorization': 'Bearer ${parameters.apiKey}'
   },
   data: {
+    'echo': true,
     'prompt': ${formatJavascriptString(parameters.prompt)}.replace('{example}', example),
     'max_tokens': ${parameters.maxTokens},
     'temperature': ${parameters.temperature},
@@ -86,12 +91,13 @@ axios(config)
 
 var config = {
   method: 'post',
-  url: 'https://api.openai.com/v1/engines/${parameters.engine}/completions',
+  url: '${HOST}/v1/engines/${parameters.engine}/completions',
   headers: { 
     'Content-Type': 'application/json', 
     'Authorization': 'Bearer ${parameters.apiKey}'
   },
   data: {
+    'echo': true,
     'prompt': ${formatJavascriptString(parameters.prompt)},
     'max_tokens': ${parameters.maxTokens},
     'temperature': ${parameters.temperature},
@@ -126,12 +132,13 @@ const example = ${formatJavascriptString(exampleText)}
 
 axios({
   method: 'post',
-  url: 'https://api.openai.com/v1/engines/${parameters.engine}/completions',
+  url: '${HOST}/v1/engines/${parameters.engine}/completions',
   headers: { 
     'Content-Type': 'application/json', 
     'Authorization': 'Bearer ${parameters.apiKey}'
   },
   data: {
+    'echo': true,
     'prompt': ${formatJavascriptString(parameters.prompt)}.replace('{example}', example),
     'max_tokens': ${parameters.maxTokens},
     'temperature': ${parameters.temperature},
@@ -157,12 +164,13 @@ axios({
 
 axios({
   method: 'post',
-  url: 'https://api.openai.com/v1/engines/${parameters.engine}/completions',
+  url: '${HOST}/v1/engines/${parameters.engine}/completions',
   headers: { 
     'Content-Type': 'application/json', 
     'Authorization': 'Bearer ${parameters.apiKey}'
   },
   data: {
+    'echo': true,
     'prompt': ${formatJavascriptString(parameters.prompt)},
     'max_tokens': ${parameters.maxTokens},
     'temperature': ${parameters.temperature},
@@ -189,10 +197,11 @@ axios({
 function generateShellExample(parameters: CompletionParameters, tabIndex: TabIndex, exampleText: string) {
     switch (tabIndex) {
         case TabIndex.multipleExamples: {
-            return `curl --location --request POST 'https://api.openai.com/v1/engines/davinci/completions' \\
+            return `curl --location --request POST '${HOST}/v1/engines/davinci/completions' \\
 --header 'Content-Type: application/json' \\
 --header 'Authorization: Bearer ${parameters.apiKey}' \\
 --data-raw '${replaceAllOccurrences(JSON.stringify({
+                'echo': true,
                 'prompt': parameters.prompt.replace('{example}', exampleText),
                 'max_tokens': parameters.maxTokens,
                 'temperature': parameters.temperature,
@@ -206,10 +215,11 @@ function generateShellExample(parameters: CompletionParameters, tabIndex: TabInd
         case TabIndex.basic:
         case TabIndex.conversations:
         case TabIndex.variations: {
-            return `curl --location --request POST 'https://api.openai.com/v1/engines/davinci/completions' \\
+            return `curl --location --request POST '${HOST}/v1/engines/davinci/completions' \\
 --header 'Content-Type: application/json' \\
 --header 'Authorization: Bearer ${parameters.apiKey}' \\
 --data-raw '${replaceAllOccurrences(JSON.stringify({
+                'echo': true,
                 'prompt': parameters.prompt,
                 'max_tokens': parameters.maxTokens,
                 'temperature': parameters.temperature,

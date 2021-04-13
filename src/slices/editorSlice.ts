@@ -718,7 +718,7 @@ const fetchVariationsAsync = (): AppThunk => (dispatch, getState) => {
 
     const completionParams = selectCompletionParameters(state);
 
-    GptAPI.generateCompletions(completionParams.prompt, completionParams, workspace.maxVariations).then(response => {
+    GptAPI.generateCompletions(completionParams.prompt, completionParams, workspace.maxVariations, false).then(response => {
         console.log(response.data);
         return { ...response.data };
     }).then(response => {
