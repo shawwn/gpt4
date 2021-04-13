@@ -137,7 +137,7 @@ const initialState: EditorState = {
             "Input: {example}\n" +
             "Output:",
         modelName: 'davinci',
-        temperature: 0.5,
+        temperature: 0.8,
         topP: 1,
         frequencyPenalty: 0,
         presencePenalty: 0,
