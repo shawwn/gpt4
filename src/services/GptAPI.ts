@@ -10,7 +10,8 @@ export interface ChoiceResult {
 
 //const HOST = `https://api.openai.com`;
 //const HOST = `http://localhost:9000`;
-const HOST = `http://api.gpt4.org:9000`;
+//const HOST = `http://api.gpt4.org:9000`;
+const HOST = `https://api.gpt4.org`;
 
 class GptAPI {
     static generateCompletions(prompt: string | Array<string>, completionParams: CompletionParameters,

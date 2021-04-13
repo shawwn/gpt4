@@ -2,7 +2,8 @@ import {TabIndex, Example, CompletionParameters} from "../slices/editorSlice";
 
 //const HOST = `https://api.openai.com`;
 //const HOST = `http://localhost:9000`;
-const HOST = `http://api.gpt4.org:9000`;
+//const HOST = `http://api.gpt4.org:9000`;
+const HOST = `https://api.gpt4.org`;
 
 interface CodeExample {
     id: string;
