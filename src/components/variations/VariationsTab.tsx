@@ -63,7 +63,7 @@ export default function VariationsTab() {
                         <Grid item><FetchVariationsButton/></Grid>
                         <Grid item><Button
                             onClick={() => dispatch(cleanVariations())}
-                        >Clean all</Button></Grid>
+                        >Clear all</Button></Grid>
                     </Grid>
                     <Grid container spacing={1} alignItems="center">
                         <Grid item><FormControlLabel
