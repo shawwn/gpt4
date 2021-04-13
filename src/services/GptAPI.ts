@@ -15,7 +15,7 @@ const HOST = `https://api.gpt4.org`;
 
 class GptAPI {
     static generateCompletions(prompt: string | Array<string>, completionParams: CompletionParameters,
-                               n: number = 1, echo: boolean = true): AxiosPromise {
+                               n: number = 1, echo: boolean = false): AxiosPromise {
         return axios({
             method: "POST",
             url: `${HOST}/v1/engines/${completionParams.engine}/completions`,

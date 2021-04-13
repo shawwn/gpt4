@@ -644,7 +644,7 @@ const fetchBasicOutputAsync = (): AppThunk => (dispatch, getState) => {
 
     const completionParams = selectCompletionParameters(state);
     dispatch(setBasicLoading(true));
-    GptAPI.generateCompletions(completionParams.prompt, completionParams).then(response => {
+    GptAPI.generateCompletions(completionParams.prompt, completionParams, 1, true).then(response => {
         console.log(response.data);
         return { ...response.data };
     }).then(response => {
@@ -718,7 +718,7 @@ const fetchVariationsAsync = (): AppThunk => (dispatch, getState) => {
 
     const completionParams = selectCompletionParameters(state);
 
-    GptAPI.generateCompletions(completionParams.prompt, completionParams, workspace.maxVariations, false).then(response => {
+    GptAPI.generateCompletions(completionParams.prompt, completionParams, workspace.maxVariations).then(response => {
         console.log(response.data);
         return { ...response.data };
     }).then(response => {
@@ -775,7 +775,7 @@ const sendMessageInConversationAsync = (conversationId: string): AppThunk => (di
     }
     const completionParams = {apiKey: state.editor.present.apiKey, ...updatedConversation.completionParams!};
     const prompt = updatedConversation.initialPrompt + updatedConversation.parts.map(p => p.text).join('');
-    GptAPI.generateCompletions(prompt, completionParams, 1, false).then(response => {
+    GptAPI.generateCompletions(prompt, completionParams, 1).then(response => {
         console.log(response.data);
         return { ...response.data };
     }).then(response => {
