@@ -155,7 +155,7 @@ const initialState: EditorState = {
 
         loadingVariations: false,
         variations: [],
-        maxVariations: 10,
+        maxVariations: 2,
         showPromptForVariations: true,
 
         conversations: [],

@@ -160,7 +160,7 @@ export const migrations = {
 
                         loadingVariations: false,
                         variations: [],
-                        maxVariations: 10,
+                        maxVariations: 2,
                         showPromptForVariations: true,
 
                         conversations: [],
