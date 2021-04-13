@@ -99,7 +99,7 @@ const templateGroups = [
                 stopSymbols: ['\\n'],
                 }},
             {id: uniqueId('template_'), name: 'Song Generation', actionPayload: {
-                    stopSymbols: ["\\n\\n"],
+                    // stopSymbols: ["\\n\\n"],
                     prompt: 'VERSE:\n' +
                         'Alas my love,\n' +
                         'You do me wrong,\n' +
