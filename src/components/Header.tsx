@@ -42,7 +42,7 @@ export default function Header() {
             <Toolbar variant="regular" disableGutters={true}>
                 <div className={classes.buttonGroup}>
                     <Typography variant="h6" color="inherit">
-                        Prompts.ai
+                        GPT-4 API Playground
                     </Typography>
                 </div>
                 <div className={classes.buttonGroup}>

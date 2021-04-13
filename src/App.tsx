@@ -54,7 +54,7 @@ function App() {
                 </Box>*/}
                 <Box mt={2}>
                     <Typography>
-                        Not affiliated with OpenAI. Feedback: seva@zhidkoff.com.</Typography>
+                        Not affiliated with OpenAI. Feedback: https://github.com/shawwn/prompts-ai</Typography>
                 </Box>
             </Container>
         </ThemeProvider>
