@@ -147,7 +147,7 @@ export const migrations = {
                         frequencyPenalty: 0,
                         presencePenalty: 0,
                         stopSymbols: ["\\n"],
-                        maxTokens: 30,
+                        maxTokens: 80,
                         tabIndex: 0,
 
                         showExamplePreviousOutputs: false,
